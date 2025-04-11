@@ -1,0 +1,5 @@
+.venv
+*.p*
+*rsa*
+*.pub
+.env
