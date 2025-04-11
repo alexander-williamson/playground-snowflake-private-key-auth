@@ -3,9 +3,25 @@
 Here's an example in Python that uses a Private Key File and unlock password to connect to Snowflake. The password is used to unlock the Private Key File before it is used.
 
 ## Steps to get this example working
-1. Copy the values from `.env.example` into `.env` file
-2. Update the values in the configuration file. Use your private key which has been given to you from your admin.
-3. Run `python main.py`. You should see a successful connection with the cursor dumped into the console.
+1. Ensure you've got a Python 3 environment
+   ```
+   brew install pyenv
+   pyenv install 3
+   pyenv local 3
+   exec "$SHELL"
+   python --version
+   ```
+2. Use a Virtual Env:
+   ```
+   python -m venv .venv
+   ```
+3. Install the Snowflake Python Connector from `requirements.txt`
+   ```
+   pip install -r requirements.txt
+   ```
+4. Copy the values from `.env.example` into `.env` file
+5. Update the values in the configuration file. Use your private key which has been given to you from your admin.
+6. Run `python main.py`. You should see a successful connection with the cursor dumped into the console.
 
 ```
 > python main.py
@@ -29,3 +45,4 @@ You will get a blank result if success, or an error if the password was wrong.
 
 ## Useful Links
 - Generating Private Key Pairs in Snowflake https://docs.snowflake.com/en/user-guide/key-pair-auth
+- Validate p8 password https://stackoverflow.com/questions/59416711/is-there-an-openssl-command-that-checks-the-validity-of-a-p8-certificate
