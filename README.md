@@ -14,6 +14,7 @@ Here's an example in Python that uses a Private Key File and unlock password to 
 2. Use a Virtual Env:
    ```
    python -m venv .venv
+   source .venv/bin/activate
    ```
 3. Install the Snowflake Python Connector from `requirements.txt`
    ```
