@@ -1,0 +1,7 @@
+organization_name      = "YOUR_ORG"
+account_name           = "YOUR_ACCOUNT"
+user                   = "you@example.com"
+role                   = "ACCOUNTADMIN"
+warehouse              = "COMPUTE_WH"
+private_key_path       = "../rsa_key.p8"
+private_key_passphrase = "REPLACE_ME"
