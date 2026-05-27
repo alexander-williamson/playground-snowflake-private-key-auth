@@ -1,5 +1,9 @@
-.venv
-*.p*
-*rsa*
+# Certs
+*.p8
 *.pub
+
+# Python
+logs
+.venv
+__pycache__
 .env
