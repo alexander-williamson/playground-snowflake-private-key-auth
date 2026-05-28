@@ -55,3 +55,23 @@ ALTER USER "example@example.com" SET RSA_PUBLIC_KEY='MIIB...QehOXLKlq2E8hwIDAQAB
 ```bash
 snow connection test --connection beans
 ```
+
+## Login to docker
+
+List the image repositories:
+
+```sql
+SHOW IMAGE REPOSITORIES;
+```
+
+Login using the Image Repository URL using `snow spcs image-registry token` and `docker login`.
+
+```bash
+snow spcs image-registry token --connection=beans --format=JSON | docker login example.registry.snowflakecomputing.com/example_database/example_schema/example_repository --username 0sessiontoken --password-stdin
+```
+
+Then push using `docker push`:
+
+```bash
+docker push org-account.registry.snowflakecomputing.com/EXAMPLE_DATABASE/EXAMPLE_SCHEMA/EXAMPLE_REPOSITORY/example-image-name:example-tag
+```

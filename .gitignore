@@ -14,3 +14,6 @@ __pycache__
 *.tfstate.*
 .terraform.lock.hcl
 terraform.tfvars
+
+# typescript
+node_modules
